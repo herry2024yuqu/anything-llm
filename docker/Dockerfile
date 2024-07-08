@@ -4,6 +4,7 @@ FROM ubuntu:jammy-20230916 AS base
 # Build arguments
 ARG ARG_UID=1000
 ARG ARG_GID=1000
+ARG GOARCH=adm64 
 
 FROM base AS build-arm64
 RUN echo "Preparing build of AnythingLLM image for arm64 architecture"
